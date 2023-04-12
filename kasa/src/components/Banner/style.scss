@@ -1,0 +1,22 @@
+.banner {
+  margin: 2%;
+  padding: 5%;
+  background: #000000;
+  mix-blend-mode: darken;
+  margin-bottom: 2%;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  background-image: url("../../assets/bannerImage.png");
+  background-size: cover;
+}
+.titleBanner {
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  color: #ffffff;
+  margin: 0%;
+}

@@ -1,7 +1,7 @@
 import React from "react";
 
 const FicheLogement = () => {
-  return <div></div>;
+  return <div>FICHE LOGEMENT</div>;
 };
 
 export default FicheLogement;
