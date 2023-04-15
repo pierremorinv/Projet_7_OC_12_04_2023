@@ -1,19 +1,21 @@
 import React from "react";
 import "./style.scss";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <nav className="NavBar">
-      <ul>
-        <li>
-          <Link to="/"> Accueil</Link>
-        </li>
-        <li>
-          <Link to="/about"> A propros</Link>
-        </li>
-      </ul>
-    </nav>
+    <ul className="navigation">
+      <NavLink to="/" className={(nav) => (nav.isActive ? "nav-active" : "")}>
+        <li>Accueil</li>
+      </NavLink>
+
+      <NavLink
+        to="/about"
+        className={(nav) => (nav.isActive ? "nav-active" : "")}
+      >
+        <li>A propros</li>
+      </NavLink>
+    </ul>
   );
 };
 export default NavBar;

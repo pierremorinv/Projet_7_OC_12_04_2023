@@ -1,6 +1,8 @@
+@import "../../style.scss";
+
 .footer {
   background-color: #000000;
-  color: #ffffff;
+  color: $secondary-color;
   text-align: center;
   font-size: 24px;
   padding: 3%;

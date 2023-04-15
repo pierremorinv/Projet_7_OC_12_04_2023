@@ -1,3 +1,4 @@
+@import "../../style.scss";
 .banner {
   margin: 2%;
   padding: 5%;
@@ -17,6 +18,6 @@
   font-style: normal;
   font-weight: 500;
   font-size: 48px;
-  color: #ffffff;
+  color: $secondary-color;
   margin: 0%;
 }
