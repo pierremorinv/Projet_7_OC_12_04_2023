@@ -1,0 +1,16 @@
+@import "../../style.scss";
+.error-body {
+  text-align: center;
+  h1 {
+    font-weight: 700;
+    font-size: 258px;
+    margin: 4%;
+    margin-bottom: 2%;
+  }
+  .redirection {
+    margin: 5%;
+    a {
+      color: $primary-color;
+    }
+  }
+}
