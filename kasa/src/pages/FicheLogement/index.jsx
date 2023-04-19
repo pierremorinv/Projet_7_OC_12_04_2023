@@ -2,8 +2,8 @@
 import { redirect, useParams } from "react-router-dom";
 import "./style.scss";
 import useFetch from "../../service/useFetch";
-import Carrousel from "../../components/Carrousel";
 import Collapse from "../../components/Collapse";
+import SlideShow from "../../components/Carrousel";
 
 const FicheLogement = () => {
   const { data, isLoading, error } = useFetch(`/assets/logements.json`);
@@ -13,7 +13,7 @@ const FicheLogement = () => {
   if (!isLoading && !error) {
     return (
       <div>
-        <Carrousel pictures={logement.pictures} />
+        <SlideShow pictures={logement.pictures} />
         <section className="presentation">
           <div>
             <h2>{logement.title}</h2>
@@ -33,7 +33,10 @@ const FicheLogement = () => {
             />
           </div>
         </section>
-        <Collapse logement={logement} />
+        <Collapse
+          description={logement.description}
+          equipments={logement.equipments}
+        />
       </div>
     );
   } else if (!logement) {

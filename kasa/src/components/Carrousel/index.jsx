@@ -3,7 +3,7 @@ import "./style.scss";
 import arrowRight from "../../assets/vectorRight.png";
 import arrowLeft from "../../assets/vectorLeft.png";
 
-const Carrousel = ({ pictures }) => {
+const SlideShow = ({ pictures }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToPrevious = () => {
@@ -16,27 +16,33 @@ const Carrousel = ({ pictures }) => {
     const newIndex = isLastPicture ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
+  const isOnlyOnePicture = pictures.length <= 1;
   console.log(pictures);
   return (
     <div className="carrousel">
-      <div
-        className="carrousel-img"
-        style={{ backgroundImage: `url(${pictures[currentIndex]})` }}
-      >
-        <button className="arrow-left" onClick={goToPrevious}>
-          <img src={arrowLeft} alt="vector-left" />
-        </button>
-        <button className="arrow-right" onClick={goToNext}>
-          <img src={arrowRight} alt="vector-right" />
-        </button>
-        {pictures.length <= 1 ? null : (
+      {isOnlyOnePicture ? (
+        <div
+          className="carrousel-img"
+          style={{ backgroundImage: `url(${pictures[currentIndex]})` }}
+        ></div>
+      ) : (
+        <div
+          className="carrousel-img"
+          style={{ backgroundImage: `url(${pictures[currentIndex]})` }}
+        >
+          <button className="arrow-left" onClick={goToPrevious}>
+            <img src={arrowLeft} alt="vector-left" />
+          </button>
+          <button className="arrow-right" onClick={goToNext}>
+            <img src={arrowRight} alt="vector-right" />
+          </button>
           <p className="carrousel-counter">
             {currentIndex + 1}/{pictures.length}
           </p>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 };
 
-export default Carrousel;
+export default SlideShow;
