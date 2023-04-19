@@ -2,4 +2,49 @@
 
 body {
   color: $primary-color;
+  .presentation {
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    h1 {
+      font-size: 36px;
+    }
+    .tags {
+      display: flex;
+      padding-left: 0%;
+
+      li {
+        padding: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 10px;
+        color: $secondary-color;
+        background-color: $primary-color;
+        margin-right: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+      }
+    }
+  }
+}
+.host {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  .host-name {
+    padding-left: 10%;
+    font-size: 18px;
+  }
+  .host-img {
+    height: 64px;
+    width: 64px;
+    border-radius: 75px;
+    -webkit-border-radius: 75px;
+    -moz-border-radius: 75px;
+    -ms-border-radius: 75px;
+    -o-border-radius: 75px;
+    padding: 10px;
+  }
 }

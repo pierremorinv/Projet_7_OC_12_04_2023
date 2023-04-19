@@ -1,6 +1,15 @@
 $primary-color: #ff6060;
 $secondary-color: #ffffff;
+$tertiary-color: #f6f6f6;
 
 body {
   font-family: Montserrat;
+  li {
+    list-style-type: none;
+  }
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
 }

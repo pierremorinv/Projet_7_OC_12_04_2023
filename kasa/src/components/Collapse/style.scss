@@ -1,0 +1,23 @@
+@import "../../style.scss";
+
+.collapse-container {
+  display: flex;
+  margin: 1%;
+  .collapse-description {
+    margin: 1%;
+    width: 50%;
+    background-color: $tertiary-color;
+  }
+  .collapse {
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: $primary-color;
+    color: $secondary-color;
+    display: flex;
+    justify-content: space-between;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+}
