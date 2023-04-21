@@ -1,16 +1,22 @@
 // import React, { useEffect, useState } from "react";
-import { redirect, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./style.scss";
 import useFetch from "../../service/useFetch";
 import Collapse from "../../components/Collapse";
-import SlideShow from "../../components/Carrousel";
+import SlideShow from "../../components/SlideShow";
+import Tag from "../../components/Tag";
+import Rate from "../../components/Rate";
 
 const FicheLogement = () => {
   const { data, isLoading, error } = useFetch(`/assets/logements.json`);
   const { id } = useParams();
+  // const navigate = useNavigate();
   const logement = data.find((accomodation) => accomodation.id === id);
 
-  if (!isLoading && !error) {
+  // if (!logement) {
+  //   navigate("/error");
+  // }
+  if (logement && !isLoading && !error) {
     return (
       <div>
         <SlideShow pictures={logement.pictures} />
@@ -18,11 +24,6 @@ const FicheLogement = () => {
           <div>
             <h2>{logement.title}</h2>
             <p>{logement.location}</p>
-            <ul className="tags">
-              {logement.tags.map((tag, index) => (
-                <li key={index}>{tag}</li>
-              ))}
-            </ul>
           </div>
           <div className="host">
             <p className="host-name">{logement.host.name}</p>
@@ -33,14 +34,16 @@ const FicheLogement = () => {
             />
           </div>
         </section>
-        <Collapse
-          description={logement.description}
-          equipments={logement.equipments}
-        />
+        <div className="tag-rates">
+          <Tag tags={logement.tags} />
+          <Rate rating={logement.rating} />
+        </div>
+        <div className="collapse-container-fiche-logement">
+          <Collapse content={logement.description} title={"Description"} />
+          <Collapse content={logement.equipments} title={"Equipements"} />
+        </div>
       </div>
     );
-  } else if (!logement) {
-    redirect("*");
   }
 };
 

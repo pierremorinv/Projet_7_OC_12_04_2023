@@ -5,27 +5,10 @@ body {
   .presentation {
     display: flex;
     justify-content: space-between;
-    padding: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
     h1 {
       font-size: 36px;
-    }
-    .tags {
-      display: flex;
-      padding-left: 0%;
-
-      li {
-        padding: 5px;
-        padding-left: 15px;
-        padding-right: 15px;
-        border-radius: 10px;
-        color: $secondary-color;
-        background-color: $primary-color;
-        margin-right: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        -ms-border-radius: 10px;
-        -o-border-radius: 10px;
-      }
     }
   }
 }
@@ -47,4 +30,14 @@ body {
     -o-border-radius: 75px;
     padding: 10px;
   }
+}
+.tag-rates {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.collapse-container-fiche-logement {
+  display: flex;
 }

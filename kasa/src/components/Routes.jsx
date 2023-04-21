@@ -5,8 +5,6 @@ import FicheLogement from "../pages/FicheLogement";
 import About from "../pages/About";
 import Error from "../pages/Error";
 
-//todo: modif description path
-
 const Routes = () => {
   return (
     <RoutesRouter>

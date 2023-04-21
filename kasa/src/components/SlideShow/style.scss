@@ -1,0 +1,43 @@
+@import "../../style.scss";
+
+.carrousel {
+  position: relative;
+  margin: 2%;
+  width: 97%;
+  height: 425px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .carrousel-image {
+    object-fit: cover;
+    border-radius: 25px;
+    height: 100%;
+    width: 100%;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+  }
+
+  .arrow-right {
+    position: absolute;
+    top: 156px;
+    right: 23px;
+  }
+  .arrow-left {
+    position: absolute;
+    top: 156px;
+    left: 23px;
+  }
+}
+.carrousel-counter {
+  color: $secondary-color;
+  position: absolute;
+  bottom: 0%;
+  left: 47%;
+  font-size: 18px;
+}

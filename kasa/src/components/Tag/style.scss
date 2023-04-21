@@ -1,0 +1,19 @@
+@import "../../style.scss";
+.tags {
+  display: flex;
+  padding-left: 0%;
+
+  li {
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+    color: $secondary-color;
+    background-color: $primary-color;
+    margin-right: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+}

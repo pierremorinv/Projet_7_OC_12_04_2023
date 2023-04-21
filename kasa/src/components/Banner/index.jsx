@@ -1,12 +1,15 @@
 import React from "react";
 import "./style.scss";
 
-const Banner = () => {
+const Banner = ({ title, image }) => {
   return (
     <div className="banner">
-      <h1 className="titleBanner">Chez vous, partout et ailleurs</h1>
+      <img className="banner-image" src={image} alt="okok" />
+      <h1 className="titleBanner">{title}</h1>
     </div>
   );
 };
 
 export default Banner;
+
+// style={{ backgroundImage: `url(${image})` }}

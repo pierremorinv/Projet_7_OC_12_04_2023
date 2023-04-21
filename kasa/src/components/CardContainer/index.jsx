@@ -4,8 +4,8 @@ import Card from "../Card";
 import useFetch from "../../service/useFetch";
 
 const CardContainer = () => {
-  const { data, isLoading } = useFetch(`/assets/logements.json`);
-  return isLoading ? (
+  const { data, isLoading, error } = useFetch(`/assets/logements.json`);
+  return isLoading && !error ? (
     <div>chargement</div>
   ) : (
     <div>

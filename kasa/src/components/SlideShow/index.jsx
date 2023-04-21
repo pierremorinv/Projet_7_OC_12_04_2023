@@ -11,25 +11,32 @@ const SlideShow = ({ pictures }) => {
     const newIndex = isFirstPicture ? pictures.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
+
   const goToNext = () => {
     const isLastPicture = currentIndex === pictures.length - 1;
     const newIndex = isLastPicture ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
+
   const isOnlyOnePicture = pictures.length <= 1;
   console.log(pictures);
+
   return (
     <div className="carrousel">
       {isOnlyOnePicture ? (
-        <div
-          className="carrousel-img"
-          style={{ backgroundImage: `url(${pictures[currentIndex]})` }}
-        ></div>
+        <img
+          className="carrousel-image"
+          src={pictures[currentIndex]}
+          alt="okok"
+        />
       ) : (
-        <div
-          className="carrousel-img"
-          style={{ backgroundImage: `url(${pictures[currentIndex]})` }}
-        >
+        <div className="carrousel">
+          {" "}
+          <img
+            className="carrousel-image"
+            src={pictures[currentIndex]}
+            alt="okok"
+          />
           <button className="arrow-left" onClick={goToPrevious}>
             <img src={arrowLeft} alt="vector-left" />
           </button>

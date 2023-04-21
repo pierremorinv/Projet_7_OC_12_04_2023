@@ -1,14 +1,24 @@
 @import "../../style.scss";
 
-.collapse-container {
-  display: flex;
+.collapse {
   margin: 1%;
-  .collapse-description {
-    margin: 1%;
-    width: 50%;
-    background-color: $tertiary-color;
+  width: 70%;
+
+  p {
+    padding-left: 10px;
+    font-size: 24px;
+    font-weight: 400;
   }
-  .collapse {
+  button {
+    padding-right: 15px;
+  }
+  .collapse-content {
+    background-color: $tertiary-color;
+    margin: 0%;
+    padding: 15px;
+  }
+
+  .collapse-top {
     font-size: 18px;
     border-radius: 10px;
     background-color: $primary-color;
@@ -19,5 +29,9 @@
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+  }
+  .collapse-title {
+    font-size: 34px;
+    margin: 5px;
   }
 }
