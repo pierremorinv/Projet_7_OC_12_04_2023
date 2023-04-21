@@ -16,6 +16,7 @@ const About = () => {
       <div className="collapse-container-about">
         {data.map((collapse, index) => (
           <Collapse
+            className="collapse-about"
             title={collapse.title}
             content={collapse.content}
             key={index}

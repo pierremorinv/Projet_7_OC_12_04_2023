@@ -6,50 +6,61 @@ import Collapse from "../../components/Collapse";
 import SlideShow from "../../components/SlideShow";
 import Tag from "../../components/Tag";
 import Rate from "../../components/Rate";
+import { useEffect } from "react";
+import Loader from "../../components/Loader";
 
 const FicheLogement = () => {
   const { data, isLoading, error } = useFetch(`/assets/logements.json`);
   const { id } = useParams();
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const logement = data.find((accomodation) => accomodation.id === id);
+  console.log(logement);
 
-  // if (!logement) {
-  //   navigate("/error");
-  // }
-  if (logement && !isLoading && !error) {
+  useEffect(() => {
+    if ((!logement && !isLoading) || error) {
+      navigate("/error");
+    }
+  }, [error, isLoading, logement, navigate]);
+
+  if (isLoading) {
     return (
-      <div>
-        <SlideShow pictures={logement.pictures} />
-        <section className="presentation">
-          <div>
-            <h2>{logement.title}</h2>
-            <p>{logement.location}</p>
-          </div>
-          <div className="host">
-            <p className="host-name">{logement.host.name}</p>
-            <img
-              className="host-img"
-              src={logement.host.picture}
-              alt={logement.host.name}
-            />
-          </div>
-        </section>
-        <div className="tag-rates">
-          <Tag tags={logement.tags} />
-          <Rate rating={logement.rating} />
-        </div>
-        <div className="collapse-container-fiche-logement">
-          <Collapse content={logement.description} title={"Description"} />
-          <Collapse
-            content={logement.equipments.map((equipment, index) => (
-              <p key={index}>{equipment}</p>
-            ))}
-            title={"Équipements"}
-          />
-        </div>
+      <div className="presentation">
+        <Loader />
       </div>
     );
   }
-};
 
+  return (
+    <div>
+      <SlideShow pictures={logement.pictures} />
+      <section className="presentation">
+        <div>
+          <h2>{logement.title}</h2>
+          <p>{logement.location}</p>
+        </div>
+        <div className="host">
+          <p className="host-name">{logement.host.name}</p>
+          <img
+            className="host-img"
+            src={logement.host.picture}
+            alt={logement.host.name}
+          />
+        </div>
+      </section>
+      <div className="tag-rates">
+        <Tag tags={logement.tags} />
+        <Rate rating={logement.rating} />
+      </div>
+      <div className="collapse-container-fiche-logement">
+        <Collapse content={logement.description} title={"Description"} />
+        <Collapse
+          content={logement.equipments.map((equipment, index) => (
+            <p key={index}>{equipment}</p>
+          ))}
+          title={"Équipements"}
+        />
+      </div>
+    </div>
+  );
+};
 export default FicheLogement;
