@@ -3,7 +3,7 @@ import "./style.scss";
 import starRedImg from "../../assets/starFull.png";
 import starGreyImg from "../../assets/starEmpty.png";
 
-const Rate = ({ rating, id }) => {
+const Rate = ({ rating }) => {
   const starRed = Array.from({ length: rating }, (star, index) => (
     <img src={starRedImg} alt="redStar" key={index}></img>
   ));
