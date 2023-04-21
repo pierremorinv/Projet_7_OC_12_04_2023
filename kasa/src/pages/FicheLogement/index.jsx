@@ -55,7 +55,7 @@ const FicheLogement = () => {
         <Collapse content={logement.description} title={"Description"} />
         <Collapse
           content={logement.equipments.map((equipment, index) => (
-            <p key={index}>{equipment}</p>
+            <li key={index}>{equipment}</li>
           ))}
           title={"Équipements"}
         />
