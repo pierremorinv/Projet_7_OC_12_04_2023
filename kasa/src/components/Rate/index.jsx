@@ -1,26 +1,23 @@
 import React from "react";
 import "./style.scss";
-import starFull from "../../assets/starFull.png";
-import starEmpty from "../../assets/starEmpty.png";
+import starRedImg from "../../assets/starFull.png";
+import starGreyImg from "../../assets/starEmpty.png";
 
-const Rate = ({ rating }) => {
+const Rate = ({ rating, id }) => {
+  const starRed = Array.from({ length: rating }, (star, index) => (
+    <img src={starRedImg} alt="redStar" key={index}></img>
+  ));
+  const emptyStar = Array.from({ length: 5 - rating }, (star, index) => (
+    <img src={starGreyImg} alt="greyStar" key={index} />
+  ));
+  console.log(rating);
+  console.log(starRed);
+  console.log(emptyStar);
+
   return (
-    <div className="stars">
-      <span className="starEmpty">
-        <img src={starEmpty} alt="star"></img>
-      </span>
-      <span className="starEmpty">
-        <img src={starEmpty} alt="star"></img>
-      </span>
-      <span className="starEmpty">
-        <img src={starEmpty} alt="star"></img>
-      </span>
-      <span className="starEmpty">
-        <img src={starEmpty} alt="star"></img>
-      </span>
-      <span className="starEmpty">
-        <img src={starEmpty} alt="star"></img>
-      </span>
+    <div>
+      {starRed}
+      {emptyStar}
     </div>
   );
 };

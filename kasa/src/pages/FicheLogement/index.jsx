@@ -36,7 +36,7 @@ const FicheLogement = () => {
         </section>
         <div className="tag-rates">
           <Tag tags={logement.tags} />
-          <Rate rating={logement.rating} />
+          <Rate rating={logement.rating} id={logement.id} />
         </div>
         <div className="collapse-container-fiche-logement">
           <Collapse content={logement.description} title={"Description"} />
