@@ -4,13 +4,18 @@ $tertiary-color: #f6f6f6;
 
 body {
   font-family: Montserrat;
-
-  li {
-    list-style-type: none;
-  }
   button {
     background-color: transparent;
     border: none;
     cursor: pointer;
+  }
+
+  main {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  li {
+    list-style-type: none;
   }
 }

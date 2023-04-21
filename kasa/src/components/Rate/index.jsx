@@ -7,7 +7,7 @@ const Rate = ({ rating }) => {
   return (
     <div className="stars">
       <span className="starEmpty">
-        <img src={starFull} alt="star"></img>
+        <img src={starEmpty} alt="star"></img>
       </span>
       <span className="starEmpty">
         <img src={starEmpty} alt="star"></img>

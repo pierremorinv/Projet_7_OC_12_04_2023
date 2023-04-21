@@ -5,8 +5,6 @@ body {
   .presentation {
     display: flex;
     justify-content: space-between;
-    padding-left: 2%;
-    padding-right: 2%;
     h1 {
       font-size: 36px;
     }
@@ -35,9 +33,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 2%;
-  padding-right: 2%;
 }
 .collapse-container-fiche-logement {
   display: flex;
+  justify-content: space-between;
 }

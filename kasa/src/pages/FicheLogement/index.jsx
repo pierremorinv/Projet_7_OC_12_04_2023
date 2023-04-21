@@ -40,7 +40,12 @@ const FicheLogement = () => {
         </div>
         <div className="collapse-container-fiche-logement">
           <Collapse content={logement.description} title={"Description"} />
-          <Collapse content={logement.equipments} title={"Equipements"} />
+          <Collapse
+            content={logement.equipments.map((equipment, index) => (
+              <p key={index}>{equipment}</p>
+            ))}
+            title={"Équipements"}
+          />
         </div>
       </div>
     );

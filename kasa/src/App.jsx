@@ -8,8 +8,10 @@ import "@fontsource/montserrat";
 const App = () => {
   return (
     <>
-      <Header />
-      <Routes />
+      <main>
+        <Header />
+        <Routes />
+      </main>
       <Footer />
     </>
   );
