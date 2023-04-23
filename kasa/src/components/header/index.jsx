@@ -6,7 +6,11 @@ import headerLogo from "../../assets/headerLogo.svg";
 const Header = () => {
   return (
     <header>
-      <img src={headerLogo} alt="locations d'appartements" />
+      <img
+        className="header-logo"
+        src={headerLogo}
+        alt="locations d'appartements"
+      />
       <NavBar />
     </header>
   );

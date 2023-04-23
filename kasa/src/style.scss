@@ -1,9 +1,12 @@
 $primary-color: #ff6060;
-$secondary-color: #ffffff;
+$secondary-color: #e5e5e5;
 $tertiary-color: #f6f6f6;
 
 body {
   font-family: Montserrat;
+  @media screen and (max-width: 599px) {
+    width: 95%;
+  }
   button {
     background-color: transparent;
     border: none;

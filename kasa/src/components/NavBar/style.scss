@@ -17,3 +17,8 @@
 .nav-active {
   border-bottom: 2px solid $primary-color;
 }
+@media (max-width: 599px) {
+  li {
+    font-size: 12px;
+  }
+}

@@ -2,7 +2,6 @@ import React from "react";
 import "./style.scss";
 import Collapse from "../../components/Collapse";
 import Banner from "../../components/Banner";
-import bannerAboutImg from "../../assets/bannerAboutImage.png";
 import useFetch from "../../service/useFetch";
 
 const About = () => {
@@ -11,7 +10,7 @@ const About = () => {
     <div>chargement</div>
   ) : (
     <div>
-      <Banner image={bannerAboutImg} />
+      <Banner className="banner-about" />
 
       <div className="collapse-container-about">
         {data.map((collapse, index) => (

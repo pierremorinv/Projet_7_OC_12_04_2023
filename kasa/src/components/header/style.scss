@@ -1,7 +1,13 @@
 header {
+  width: 95%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 2%;
   margin-bottom: 3%;
+  .header-logo {
+    @media (max-width: 599px) {
+      width: 40%;
+    }
+  }
 }
