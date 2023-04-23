@@ -29,38 +29,40 @@ const FicheLogement = () => {
       </div>
     );
   }
+  if (logement) {
+    return (
+      <>
+        <SlideShow pictures={logement.pictures} />
+        <section className="presentation">
+          <div>
+            <h2>{logement.title}</h2>
+            <p>{logement.location}</p>
+            <Tag tags={logement.tags} />
+          </div>
+          <div className="host-star">
+            <div className="host">
+              <p className="host-name">{logement.host.name}</p>
+              <img
+                className="host-img"
+                src={logement.host.picture}
+                alt={logement.host.name}
+              />
+              <Rate rating={logement.rating} />
+            </div>
+          </div>
+        </section>
 
-  return (
-    <div>
-      <SlideShow pictures={logement.pictures} />
-      <section className="presentation">
-        <div>
-          <h2>{logement.title}</h2>
-          <p>{logement.location}</p>
-        </div>
-        <div className="host">
-          <p className="host-name">{logement.host.name}</p>
-          <img
-            className="host-img"
-            src={logement.host.picture}
-            alt={logement.host.name}
+        <div className="collapse-container-fiche-logement">
+          <Collapse content={logement.description} title={"Description"} />
+          <Collapse
+            content={logement.equipments.map((equipment, index) => (
+              <li key={index}>{equipment}</li>
+            ))}
+            title={"Équipements"}
           />
         </div>
-      </section>
-      <div className="tag-rates">
-        <Tag tags={logement.tags} />
-        <Rate rating={logement.rating} />
-      </div>
-      <div className="collapse-container-fiche-logement">
-        <Collapse content={logement.description} title={"Description"} />
-        <Collapse
-          content={logement.equipments.map((equipment, index) => (
-            <li key={index}>{equipment}</li>
-          ))}
-          title={"Équipements"}
-        />
-      </div>
-    </div>
-  );
+      </>
+    );
+  }
 };
 export default FicheLogement;

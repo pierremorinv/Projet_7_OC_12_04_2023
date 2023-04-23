@@ -1,10 +1,27 @@
 @import "../../style.scss";
 
-.footer {
+footer {
   background-color: #000000;
   color: $secondary-color;
   text-align: center;
   font-size: 24px;
   padding: 3%;
   padding-left: 0%;
+
+  @media screen and (max-width: 599) {
+    min: width 600px;
+  }
+  .footer-logo {
+    @media screen and (max-width: 599px) {
+      margin-top: 10%;
+      width: 122px;
+      height: 39.44px;
+    }
+  }
+  .footer-title {
+    width: 100%;
+    @media screen and (max-width: 599px) {
+      font-size: 12px;
+    }
+  }
 }

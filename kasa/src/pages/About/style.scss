@@ -3,9 +3,16 @@
 .collapse-container-about {
   width: 100%;
   text-align: -webkit-center;
+  @media screen and (max-width: 599px) {
+    margin-bottom: 200px;
+  }
 }
 
 .collapse-about {
   width: 75%;
   margin-bottom: 1%;
+  @media screen and (max-width: 599px) {
+    width: 100%;
+    margin-bottom: 4%;
+  }
 }

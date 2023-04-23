@@ -1,1 +1,18 @@
 @import "../../style.scss";
+
+.stars {
+  .red-star {
+    @media screen and (max-width: 599px) {
+      width: 13px;
+      margin-right: 10px;
+      margin-bottom: 15px;
+    }
+  }
+  .empty-star {
+    @media screen and (max-width: 599px) {
+      width: 13px;
+      margin-right: 10px;
+      margin-bottom: 15px;
+    }
+  }
+}

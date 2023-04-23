@@ -5,10 +5,23 @@ body {
   .presentation {
     display: flex;
     justify-content: space-between;
-    h1 {
+    h2 {
       font-size: 36px;
     }
+    @media screen and (max-width: 599px) {
+      display: block;
+      h2 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
   }
+}
+.host-star {
+  display: flex;
+  justify-content: space-between;
 }
 .host {
   display: flex;
@@ -28,13 +41,28 @@ body {
     -o-border-radius: 75px;
     padding: 10px;
   }
+  @media screen and (max-width: 599px) {
+    .host-name {
+      font-size: 12px;
+    }
+    .host-img {
+      width: 32px;
+      height: 32px;
+    }
+  }
 }
 .tag-rates {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media screen and (max-width: 599px) {
+    display: block;
+  }
 }
 .collapse-container-fiche-logement {
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 599px) {
+    display: block;
+  }
 }

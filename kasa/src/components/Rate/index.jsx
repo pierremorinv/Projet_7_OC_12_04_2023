@@ -5,17 +5,17 @@ import starGreyImg from "../../assets/starEmpty.png";
 
 const Rate = ({ rating }) => {
   const starRed = Array.from({ length: rating }, (star, index) => (
-    <img src={starRedImg} alt="redStar" key={index}></img>
+    <img className="red-star" src={starRedImg} alt="redStar" key={index}></img>
   ));
   const emptyStar = Array.from({ length: 5 - rating }, (star, index) => (
-    <img src={starGreyImg} alt="greyStar" key={index} />
+    <img className="empty-star" src={starGreyImg} alt="greyStar" key={index} />
   ));
   console.log(rating);
   console.log(starRed);
   console.log(emptyStar);
 
   return (
-    <div>
+    <div className="stars">
       {starRed}
       {emptyStar}
     </div>
