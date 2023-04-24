@@ -25,6 +25,7 @@
 
 .host-star {
   margin-top: 24px;
+
   @media screen and (max-width: 599px) {
     display: flex;
     justify-content: space-between;
@@ -37,13 +38,13 @@
 .host {
   display: flex;
   align-items: center;
+  margin-left: 20%;
   .host-name {
     font-size: 18px;
     margin: 0px;
-    padding-left: 10%;
+    padding-left: 20%;
   }
   .host-img {
-    padding-right: 10px;
     height: 64px;
     width: 64px;
     border-radius: 75px;
