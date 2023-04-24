@@ -18,10 +18,9 @@
     rgba(236, 66, 66, 0.5) 50%
   );
 
-  @media screen and (max-width: 700px) {
-    min: width 335px;
-    min: height 255px;
-    width: 100%;
+  @media screen and (max-width: 600px) {
+    width: 335px;
+    height: 255px;
   }
   .thumb-title {
     position: absolute;
@@ -29,7 +28,7 @@
     bottom: 1%;
     width: 50%;
     color: $secondary-color;
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 600px) {
       font-size: 18px;
     }
   }

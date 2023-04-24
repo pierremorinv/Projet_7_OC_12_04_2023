@@ -47,8 +47,8 @@ const FicheLogement = () => {
                 src={logement.host.picture}
                 alt={logement.host.name}
               />
-              <Rate rating={logement.rating} />
             </div>
+            <Rate rating={logement.rating} />
           </div>
         </section>
 

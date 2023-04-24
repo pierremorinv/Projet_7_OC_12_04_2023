@@ -1,6 +1,6 @@
 @import "../../style.scss";
 
-.gallery {
+.card-container {
   border-radius: 25px;
   display: flex;
   flex-wrap: wrap;
@@ -15,8 +15,10 @@
   -ms-border-radius: 25px;
   -o-border-radius: 25px;
   @media screen and (max-width: 599px) {
-    width: 97%;
+    background-color: white;
+    width: 100%;
     gap: 15px;
-    padding: 1%;
+    padding: 0%;
+    margin: 0%;
   }
 }

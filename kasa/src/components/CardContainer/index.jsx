@@ -7,12 +7,12 @@ import Loader from "../Loader";
 const CardContainer = () => {
   const { data, isLoading, error } = useFetch(`/assets/logements.json`);
   return isLoading && !error ? (
-    <div className="gallery">
+    <div className="card-container">
       <Loader />
     </div>
   ) : (
     <div>
-      <ul className="gallery">
+      <ul className="card-container">
         {data.map((accomodation) => (
           <Card key={accomodation.id} accomodation={accomodation} />
         ))}
