@@ -3,7 +3,7 @@ import { Routes as RoutesRouter, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import FicheLogement from "../pages/FicheLogement";
 import About from "../pages/About";
-import Error from "../pages/Error";
+import P404 from "../pages/P404";
 
 const Routes = () => {
   return (
@@ -11,7 +11,7 @@ const Routes = () => {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/fiche-logement/:id" element={<FicheLogement />} />
-      <Route path="*" element={<Error />} />
+      <Route path="*" element={<P404 />} />
     </RoutesRouter>
   );
 };

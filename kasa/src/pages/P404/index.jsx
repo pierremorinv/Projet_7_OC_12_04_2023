@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.scss";
 
-const Error = () => {
+const P404 = () => {
   return (
     <div className="error-body">
       {" "}
@@ -18,4 +18,4 @@ const Error = () => {
   );
 };
 
-export default Error;
+export default P404;
