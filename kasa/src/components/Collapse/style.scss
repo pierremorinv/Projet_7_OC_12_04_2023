@@ -19,11 +19,12 @@
   }
   .collapse-button {
     padding-right: 15px;
-    @media screen and (max-width: 599px) {
-      padding-right: 5px;
-    }
     .collapse-button-img {
-      width: 50%;
+      @media screen and (max-width: 599px) {
+        padding-right: 5px;
+
+        width: 50%;
+      }
     }
   }
   .collapse-content {
