@@ -19,6 +19,9 @@
   }
   .collapse-button {
     padding-right: 15px;
+    @media screen and (max-width: 599px) {
+      padding-right: 0px;
+    }
     .collapse-button-img {
       @media screen and (max-width: 599px) {
         padding-right: 5px;
