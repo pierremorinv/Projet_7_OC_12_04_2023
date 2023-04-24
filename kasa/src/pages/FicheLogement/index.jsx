@@ -23,11 +23,7 @@ const FicheLogement = () => {
   }, [error, isLoading, logement, navigate]);
 
   if (isLoading) {
-    return (
-      <div className="presentation">
-        <Loader />
-      </div>
-    );
+    return <Loader />;
   }
   if (logement) {
     return (
@@ -51,7 +47,6 @@ const FicheLogement = () => {
             <Rate rating={logement.rating} />
           </div>
         </section>
-
         <div className="collapse-container-fiche-logement">
           <Collapse content={logement.description} title={"Description"} />
           <Collapse
