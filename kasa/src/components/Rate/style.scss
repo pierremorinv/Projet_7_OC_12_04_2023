@@ -2,7 +2,9 @@
 
 .stars {
   padding-top: 20px;
+  padding-left: 25px;
   @media screen and (max-width: 599px) {
+    padding-left: 0px;
     padding: 0px;
   }
 

@@ -31,6 +31,7 @@
     }
   }
   .collapse-content {
+    font-size: 18px;
     background-color: $tertiary-color;
     margin: 0%;
     padding: 15px;
@@ -43,15 +44,16 @@
 
   .collapse-top {
     font-size: 18px;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: $primary-color;
-    color: $secondary-color;
+    color: $tertiary-color;
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
   }
   .collapse-title {
     font-size: 34px;

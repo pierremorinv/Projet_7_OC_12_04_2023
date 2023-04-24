@@ -22,12 +22,14 @@
     width: 335px;
     height: 255px;
   }
+
   .thumb-title {
     position: absolute;
     left: 3%;
     bottom: 1%;
     width: 50%;
     color: $secondary-color;
+
     @media screen and (max-width: 600px) {
       font-size: 18px;
     }

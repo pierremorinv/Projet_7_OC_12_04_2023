@@ -7,24 +7,39 @@
     margin: 4%;
     margin-bottom: 2%;
   }
+  .error-body-message {
+    p {
+      font-size: 36px;
+      font-weight: 500;
+    }
+  }
+
   .redirection {
-    margin: 5%;
+    margin-bottom: 5%;
     a {
       color: $primary-color;
     }
   }
   @media screen and (max-width: 599px) {
+    .error-body {
+      width: 50%;
+    }
+    .error-body-message {
+      margin-top: 150px;
+    }
     h1 {
       font-size: 92px;
-      margin-top: 150px;
-      margin-bottom: 10px;
+      margin-left: 0px;
+      margin-right: 0px;
     }
     p {
       font-size: 18px;
-      margin-bottom: 100px;
+      font-weight: 600;
+      width: 100%;
     }
     .redirection {
       font-size: 14px;
+      margin-top: 150px;
       margin-bottom: 200px;
     }
   }

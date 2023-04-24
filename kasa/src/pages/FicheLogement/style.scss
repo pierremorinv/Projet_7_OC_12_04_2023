@@ -1,32 +1,30 @@
 @import "../../style.scss";
 
-body {
+.presentation {
   color: $primary-color;
-  .presentation {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  h2 {
+    font-size: 36px;
+    margin-bottom: 0px;
+  }
+  p {
+    font-size: 18px;
+    margin-top: 0px;
+  }
+  @media screen and (max-width: 599px) {
+    display: block;
     h2 {
-      font-size: 36px;
-      margin-bottom: 0px;
+      font-size: 18px;
     }
     p {
-      font-size: 18px;
-      margin-top: 0px;
-    }
-    @media screen and (max-width: 599px) {
-      display: block;
-      h2 {
-        font-size: 18px;
-      }
-      p {
-        font-size: 14px;
-      }
+      font-size: 14px;
     }
   }
 }
+
 .host-star {
   margin-top: 24px;
-  margin-right: 5px;
   @media screen and (max-width: 599px) {
     display: flex;
     justify-content: space-between;
@@ -42,12 +40,10 @@ body {
   .host-name {
     font-size: 18px;
     margin: 0px;
-    padding-left: 30%;
-    @media screen and (max-width: 599px) {
-      padding-left: 25%;
-    }
+    padding-left: 10%;
   }
   .host-img {
+    padding-right: 10px;
     height: 64px;
     width: 64px;
     border-radius: 75px;
@@ -66,18 +62,12 @@ body {
     }
   }
 }
-.tag-rates {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  @media screen and (max-width: 599px) {
-    display: block;
-  }
-}
+
 .collapse-container-fiche-logement {
   display: flex;
   justify-content: space-between;
   @media screen and (max-width: 599px) {
+    margin-bottom: 15%;
     display: block;
   }
 }

@@ -10,12 +10,9 @@ const Collapse = ({ content, title, className = "" }) => {
     <>
       {isOpen ? (
         <article className={`collapse ${className}`}>
-          <div className="collapse-top">
+          <div onClick={() => setIsOpen(!isOpen)} className="collapse-top">
             <p className="collapse-title">{title}</p>
-            <button
-              className="collapse-button"
-              onClick={() => setIsOpen(!isOpen)}
-            >
+            <button className="collapse-button">
               <img
                 className=" collapse-button-img"
                 src={vectorUp}
@@ -27,12 +24,9 @@ const Collapse = ({ content, title, className = "" }) => {
         </article>
       ) : (
         <article className={`collapse ${className}`}>
-          <div className="collapse-top">
+          <div onClick={() => setIsOpen(!isOpen)} className="collapse-top">
             <p className="collapse-title">{title} </p>
-            <button
-              className="collapse-button"
-              onClick={() => setIsOpen(!isOpen)}
-            >
+            <button className="collapse-button">
               <img
                 className=" collapse-button-img"
                 src={vectordown}
