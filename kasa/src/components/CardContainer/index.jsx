@@ -7,9 +7,7 @@ import Loader from "../Loader";
 const CardContainer = () => {
   const { data, isLoading, error } = useFetch(`/assets/logements.json`);
   return isLoading && !error ? (
-    <div className="card-container">
-      <Loader />
-    </div>
+    <Loader />
   ) : (
     <div>
       <ul className="card-container">
