@@ -26,6 +26,12 @@
 }
 @media (max-width: 599px) {
   li {
+    text-transform: uppercase;
     font-size: 12px;
+    line-height: 10px;
+  }
+  .nav-active {
+    border-bottom: 1px solid $primary-color;
+    background: 0px;
   }
 }
