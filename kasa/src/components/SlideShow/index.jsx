@@ -27,15 +27,14 @@ const SlideShow = ({ pictures }) => {
         <img
           className="carrousel-image"
           src={pictures[currentIndex]}
-          alt="okok"
+          alt="carrousel-img"
         />
       ) : (
         <div className="carrousel">
-          {" "}
           <img
             className="carrousel-image"
             src={pictures[currentIndex]}
-            alt="okok"
+            alt="carrousel-img"
           />
           <button className="arrow-left" onClick={goToPrevious}>
             <img src={arrowLeft} alt="vector-left" />
