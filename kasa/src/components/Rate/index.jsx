@@ -10,9 +10,6 @@ const Rate = ({ rating }) => {
   const emptyStar = Array.from({ length: 5 - rating }, (star, index) => (
     <img className="empty-star" src={starGreyImg} alt="greyStar" key={index} />
   ));
-  console.log(rating);
-  console.log(starRed);
-  console.log(emptyStar);
 
   return (
     <div className="stars">
