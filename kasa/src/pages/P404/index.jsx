@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./style.scss";
 
 const P404 = () => {
@@ -9,7 +10,7 @@ const P404 = () => {
         <p>Oups! la page que vous demandez n'existe pas.</p>
       </div>
       <p className="redirection">
-        <a href="/">Retourner sur la page d'acceuil</a>{" "}
+        <Link to="/">Retourner sur la page d'acceuil </Link>
       </p>
     </div>
   );
